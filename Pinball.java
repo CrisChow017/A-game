@@ -27,7 +27,7 @@ public class Pinball {
     //定义一个时间刷新器
     private Timer timer;
     //定义画布
-    private class Mycavas extends Canvas {
+    private class Mycavas extends JPanel {
 
         @Override
         public void paint(Graphics g) {
@@ -53,7 +53,7 @@ public class Pinball {
     Mycavas drawArea = new Mycavas();
     public void init(){
         //组装部件，完成操作逻辑
-        Frame frame = new Frame();
+        Frame frame = new JFrame();
         KeyListener keylistener = new KeyAdapter(){
             @Override
             public void keyPressed(KeyEvent e) {
